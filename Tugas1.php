@@ -59,23 +59,23 @@ function setPrice($price){
         /**
         * 
         */
-        class CDFilm extends product
+        class CDRack extends product
         {
-        public $judul;
-        public $genre;
-        function getJudul(){
-            return $this->judul;
+        public $capacity;
+        public $modal;
+        function getcapacity(){
+            return $this->Capacity;
 }
-    function setJudul($judul){
-    $this->judul = $judul;
+    function setCapacity($capacity){
+    $this->capacity = $capacity;
     }
 
-    function getGenre(){
-    return $this->genre;
+    function getModal(){
+    return $this->modal;
 
     }
-    function setGenre($genre){
-    $this->genre = $genre;
+    function setModal($modal){
+    $this->modal = $modal;
     }
 
     function setPrice($price){
@@ -90,7 +90,7 @@ function setPrice($price){
 }
 $beli = new product();
 $beli_cdm = new CDMusik();
-$beli_cdr = new CDFilm();
+$beli_cdr = new CDRack();
 $beli->setName("CD musik");
 $beli->setPrice(650000);
 $beli->setDiscount("Discount saat ini : 1. CD Musik = 5% <br/> 2. CD Film = 0% 
@@ -113,13 +113,13 @@ $beli->setDiscount("Discount saat ini : 1. CD Musik = 5% <br/> 2. CD Film = 0%
     echo "Total Harga : Rp." . $beli_cdm->getPrice() . ",-<br/>Harga diatas sudah 
     termasuk PPN sebesar 10% dan Discount 5%<br/><br/><hr/>";
 
-$beli_cdr->setJudul("KDrama");
-$beli_cdr->setGenre("Drama, Komedi, Romansa");
+$beli_cdr->setCapacity("1500");
+$beli_cdr->setModal("Modern");
 $beli_cdr->setPrice(250000);
 
-    echo "---SELAMAT DATANG DI CDFILM 2023--- <br/>";   
-    echo "Judul : " . $beli_cdr->getJudul() . "<br/>";
-    echo "Genre : " . $beli_cdr->getGenre() . "<br/>";
+    echo "---SELAMAT DATANG DI CDRack 2023--- <br/>";   
+    echo "Judul : " . $beli_cdr->getCapacity() . "<br/>";
+    echo "Genre : " . $beli_cdr->getModal() . "<br/>";
     echo "Mohon maaf anda tidak mendapatkan Discount <br/>";
     echo "Total Harga : Rp." . $beli_cdr->getPrice() . ",-<br/>Harga diatas sudah 
     termasuk ppn sebesar 15% dan tidak mendapatkan discount";
